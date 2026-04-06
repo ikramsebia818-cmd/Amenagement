@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Aménagement Intérieur</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>🏗️ Aménagement Intérieur</h1>
+  <p>Estimation professionnelle des coûts</p>
+</header>
+
+<div class="container">
+
+  <!-- 🍳 Cuisine -->
+  <div class="card">
+    <h2>🍳 Cuisine</h2>
+    <button onclick="saveCuisine()">💾 Enregistrer</button>
+
+    <select id="typeCuisine">
+      <option value="bois">Bois</option>
+      <option value="mdf">MDF</option>
+      <option value="metal">Métal</option>
+    </select>
+
+    <select id="qualiteCuisine">
+      <option value="standard">Standard</option>
+      <option value="premium">Premium</option>
+      <option value="luxe">Luxe</option>
+    </select>
+
+    <input type="number" id="longueurCuisine" placeholder="Longueur (m)">
+    <input type="number" id="largeurCuisine" placeholder="Largeur (m)">
+    <input type="number" id="hauteurCuisine" placeholder="Hauteur (m)">
+    <input type="number" id="prixCuisine" placeholder="Prix (DA / m²)">
+
+    <button onclick="calcCuisine()">Calculer</button>
+    <p id="resCuisine"></p>
+  </div>
+
+  <!-- 🪵 Placard -->
+  <div class="card">
+    <h2>🪵 Placard</h2>
+
+    <select id="typePlacard">
+      <option value="bois">Bois</option>
+      <option value="mdf">MDF</option>
+    </select>
+
+    <input type="number" id="longueurPlacard" placeholder="Longueur (m)">
+    <input type="number" id="largeurPlacard" placeholder="Largeur (m)">
+    <input type="number" id="prixPlacard" placeholder="Prix (DA / m²)">
+
+    <button onclick="calcPlacard()">Calculer</button>
+    <p id="resPlacard"></p>
+  </div>
+
+  <!-- 🚿 Sanitaire -->
+  <div class="card">
+    <h2>🚿 Sanitaire</h2>
+
+    <select id="typeSanitaire">
+      <option value="carrelage">Carrelage</option>
+      <option value="peinture">Peinture</option>
+    </select>
+
+    <input type="number" id="longueurSanitaire" placeholder="Longueur (m)">
+    <input type="number" id="largeurSanitaire" placeholder="Largeur (m)">
+    <input type="number" id="hauteurSanitaire" placeholder="Hauteur (m)">
+    <input type="number" id="prixSanitaire" placeholder="Prix (DA / m²)">
+
+    <input type="number" id="nbWC" placeholder="Nombre WC">
+    <input type="number" id="prixWC" placeholder="Prix WC (DA)">
+
+    <input type="number" id="nbLavabo" placeholder="Nombre Lavabo">
+    <input type="number" id="prixLavabo" placeholder="Prix Lavabo (DA)">
+
+    <button onclick="calcSanitaire()">Calculer</button>
+    <p id="resSanitaire"></p>
+  </div>
+
+  <!-- 💰 Total -->
+  <div class="card total">
+    <h2>💰 Total Général</h2>
+
+    <button onclick="calcTotal()">Voir le total</button>
+    <p id="total"></p>
+  </div>
+
+</div>
+
+<h2>📦 Projets depuis le serveur</h2>
+<div id="projects"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
